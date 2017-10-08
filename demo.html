@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" id="vp" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- Demo styles -->
+    <style>
+   
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        background:url(img/new_bg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .swiper-slide {
+        /*text-align: center;*/
+        /*font-size: 18px;*/
+        /*background: #fff;*/
+        /* Center slide text vertically */
+       /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;*/
+    }
+    </style>
+    <script>
+            //把尺寸放大N倍(N=window.devicePicelRatio)
+            var wd = document.documentElement.clientWidth * window.devicePixelRatio /16;
+            
+            document.getElementsByTagName("html")[0].style.fontSize =wd+"px";
+            //把屏幕的倍率缩小到N分之一(N是window.devicePixelRatio)
+            var scale = 1/window.devicePixelRatio;
+            var mstr = 'initial-scale='+ scale +',maximum-scale='+scale+',minimum-scale='+scale+',user-scalable=no';
+            document.getElementById("vp").content = mstr;
+            
+    </script>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <!-- <div class="swiper-wrapper"> -->
+            <ul id="page-list" class="page-list swiper-wrapper">
+                <li id="page-0-0" class="page current swiper-slide">
+                    <div id="pageinner-0-0" class="pageinner">
+                        <div id="cmp-1" class="cmp image">
+                            <img class="cmp-inner" src="img/circle2.png" alt="" />
+                        </div>
+                        <div id="cmp-2" class="cmp image">
+                            <img class="cmp-inner" src="img/self.png" alt="" />
+                        </div>
+                        <div id="cmp-3" class="cmp image">
+                            <img class="cmp-inner" src="img/cmp1-3.png" alt="" />
+                        </div>
+                        <div id="cmp-4" class="cmp text">
+                            <div class="cmp-inner" id="reswrap">
+                                <div id="resume">personal resume<br>个人简历</div>
+                            </div>
+                        </div>
+                        <div id="cmp-5" class="cmp text">
+                            <div id="namewrap">
+                                <div>魏瑞健</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="page-1-0" class="page current swiper-slide">
+                    <div id="pageinner-1-0" class="pageinner">
+                        <div id="cmp-6" class="cmp image">
+                            <img class="cmp-inner" src="img/bycicle.png" alt="" />
+                        </div>
+                        <div id="cmp-7" class="cmp image">
+                            <img class="cmp-inner" src="img/camera.png" alt="" />
+                        </div>
+                        <div id="cmp-8" class="cmp image">
+                            <img class="cmp-inner" src="img/swim.png" alt="" />
+                        </div>
+                        <div id="cmp-9" class="cmp image">
+                            <img src="img/musics.png" alt="" />
+                        </div>
+                        <div id="cmp-10" class="cmp image">
+                            <img src="img/football.png" alt="" />
+                        </div>
+                        <div id="cmp-11" class="cmp image">
+                            <img src="img/bicycle-1.png" alt="" />
+                        </div>
+                        <div id="cmp-12" class="cmp image">
+                            <img src="img/camera-1.png" alt="" />
+                        </div>
+                        <div id="cmp-13" class="cmp image">
+                            <img src="img/football-1.png" alt="" />
+                        </div>
+                        <div id="cmp-14" class="cmp image">
+                            <img src="img/musics-1.png" alt="" />
+                        </div>
+                        <div id="cmp-15" class="cmp image">
+                            <img src="img/swim-1.png" alt="" />
+                        </div>
+                        <div id="cmp-16" class="cmp image">
+                            <img src="img/hobby.png" alt="" />
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="page-2-0" class="page current swiper-slide">
+                    <div id="pageinner-2-0" class="pageinner">
+                        <div id="cmp-17" class="cmp image">
+                            <img class="cmp-inner" id="line-1" src="img/line-1.png" alt="" />
+                        </div>
+                        <div id="cmp-18" class="cmp image">
+                            <img class="cmp-inner" src="img/line-2.png" alt="" />
+                        </div>
+                        <div id="cmp-19" class="cmp image">
+                            <img class="cmp-inner" src="img/line-3.png" alt="" />
+                        </div>
+                        <div id="cmp-20" class="cmp image">
+                            <img class="cmp-inner" src="img/line-4.png" alt="" />
+                        </div>
+                        <div id="cmp-21" class="cmp image">
+                            <img id="question" class="cmp-inner" src="img/question1.png" alt="" />
+                        </div>
+                        <div id="cmp-22" class="cmp image">
+                            <img class="cmp-inner" src="img/what.png" alt="" />
+                        </div>
+                        <div id="cmp-23" class="cmp image">
+                            <img class="cmp-inner" src="img/job.png" alt="" />
+                        </div>
+                        <div id="cmp-24" class="cmp image">
+                            <img class="cmp-inner" src="img/what2.png" alt="" />
+                        </div>
+                        <div id="cmp-25" class="cmp image">
+                            <img class="cmp-inner" src="img/theway.png" alt="" />
+                        </div>
+                        <div id="cmp-26" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-27" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-28" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-29" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-30" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        
+                        <div id="cmp-31" class="cmp image">
+                            <img class="cmp-inner" src="img/birth.png" alt="" />
+                        </div>
+                    </div>
+                </li>
+                <li id="page-3-0" class="page current swiper-slide">
+                    <div id="pageinner-3-0" class="pageinner">
+                        <div id="cmp-32" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-33" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-34" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-35" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">国家励志奖学金</font>
+                            </div>
+                        </div>
+                        <div id="cmp-36" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-37" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-38" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-39" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-40" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-41" class="cmp text">
+                            <div class="cmp-inner word" style="font-size:1.2rem">
+                            	<font color="#97daf3">获奖情况</font>
+                            </div>
+                        </div>
+                        <div id="cmp-42" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">2015/12</font>
+                            </div>
+                        </div>
+                        <div id="cmp-43" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">2015/11</font>
+                            </div>
+                        </div>
+                        <div id="cmp-44" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">2014/11</font>
+                            </div>
+                        </div>
+                        <div id="cmp-45" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">2013/12</font>
+                            </div>
+                        </div>
+                        <div id="cmp-46" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-47" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">2013/11</font>
+                            </div>
+                        </div>
+                        <div id="cmp-48" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">学习优秀奖学金</font>
+                            </div>
+                        </div>
+                        <div id="cmp-49" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">社会实践奖学金</font>
+                            </div>
+                        </div>
+                        <div id="cmp-50" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">国家励志奖学金</font>
+                            </div>
+                        </div>
+                        <div id="cmp-51" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">学习优秀奖学金</font>
+                            </div>
+                        </div>        
+                    </div>
+                </li>
+                <li id="page-4-0" class="page current swiper-slide">
+                    <div id="pageinner-4-0" class="pageinner">
+                        <div id="cmp-32" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-33" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-34" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-35" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">HTML5+CSS3</font>
+                            </div>
+                        </div>
+                        <div id="cmp-36" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-37" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-38" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-39" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-40" class="cmp image">
+                            <img class="cmp-inner" src="img/line-vertical.png" alt="" />
+                        </div>
+                        <div id="cmp-41" class="cmp text">
+                            <div class="cmp-inner word" style="font-size:1.2rem">
+                            	<font color="#97daf3">专业技能</font>
+                            </div>
+                        </div>
+                        <div id="cmp-42" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">精通掌握</font>
+                            </div>
+                        </div>
+                        <div id="cmp-43" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">熟练使用</font>
+                            </div>
+                        </div>
+                        <div id="cmp-44" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">熟练级别</font>
+                            </div>
+                        </div>
+                        <div id="cmp-45" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">熟悉运用</font>
+                            </div>
+                        </div>
+                        <div id="cmp-46" class="cmp image">
+                            <img class="cmp-inner" src="img/redball.png" alt="" />
+                        </div>
+                        <div id="cmp-47" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">了解一些</font>
+                            </div>
+                        </div>
+                        <div id="cmp-48" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">原生Javascript</font>
+                            </div>
+                        </div>
+                        <div id="cmp-49" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">JQuery</font>
+                            </div>
+                        </div>
+                        <div id="cmp-50" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">ajax与后台交互</font>
+                            </div>
+                        </div>
+                        <div id="cmp-51" class="cmp text">
+                            <div class="cmp-inner word">
+                            	<font color="#fff">angularJs</font>
+                            </div>
+                        </div>     
+                    </div>
+                </li>
+                <!--<li id="page-5-0" class="page current swiper-slide">
+                    <div id="pageinner-5-0" class="pageinner">
+                        <div id="cmp-1" class="cmp image">
+                            <img class="cmp-inner" src="img/cmp1.png" alt="" />
+                        </div>
+                        <div id="cmp-2" class="cmp image">
+                            <img class="cmp-inner" src="img/cmp1-2.png" alt="" />
+                        </div>
+                        <div id="cmp-3" class="cmp image">
+                            <img class="cmp-inner" src="img/cmp1-3.png" alt="" />
+                        </div>
+                        <div id="cmp-4" class="cmp text">
+                            <div class="cmp-inner" id="reswrap">
+                                <div id="resume">简历</div>
+                            </div>
+                        </div>
+                        <div id="cmp-5" class="cmp text">
+                            <div id="namewrap">
+                                <div style="color:rgb(255,255,255);font-size:1.2rem;">魏瑞健</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>-->
+                <li id="page-6-0" class="page current swiper-slide">
+                    <div id="pageinner-6-0" class="pageinner">
+                    	<div id="cmp-4" class="cmp text">
+                            <div class="cmp-inner" id="reswrap">
+                                <div id="contact">联系我吧</div>
+                            </div>
+                        </div>
+                        <div id="cmp-88" class="cmp text" >
+                            <div class="cmp-inner inner88">
+                                <font>Email：15242527397@163.com</font>
+                            </div>
+                        </div>
+                        <div id="cmp-89" class="cmp image">
+                            <img class="cmp-inner" src="img/circle2.png" alt="" />
+                        </div>
+                        <div id="cmp-90" class="cmp image">
+                            <img class="cmp-inner" src="img/self.png" alt="" />
+                        </div>
+                        <div id="cmp-91" class="cmp image">
+                            <img class="cmp-inner" src="img/cmp1-3.png" alt="" />
+                        </div>
+                        <div id="cmp-92" class="cmp text">
+                            <div class="cmp-inner inner88">
+                                <font>Birth：1993/7/2(23)</font>
+                            </div>
+                        </div>
+                        <div id="cmp-93" class="cmp text">
+                            <div class="cmp-inner inner88">
+                                <font>TEL：15242527397</font>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <div id="music" class="music">
+                    <audio src="media/howlong.mp3"id="music-audio" autoplay="autoplay"></audio>
+                    <div class="control">
+                        <div class="control-after"></div>
+                    </div>
+            </div> 
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        onTransitionEnd: function(swiper){
+        	var father = document.getElementsByClassName("swiper-slide");
+        	var index = swiper.activeIndex;
+        	
+        	for(var i=0;i<father.length;i++){
+        		 (function(idx){
+        		 	if(index==idx){
+        		 		father[idx].style.top = idx*100 +"%";
+	        			father[idx].style.display = "block";
+	        		}else{
+	        			father[idx].style.display = "none";
+	        		}
+        			
+        		 })(i);	
+        	}
+    	}
+    });
+
+    var control = document.getElementsByClassName("control")[0];
+    var control_after = document.getElementsByClassName("control-after")[0];
+    var music_audio = document.getElementById("music-audio");
+    var isRunning = false;
+    control.addEventListener("touchend",function(){
+        if(isRunning==false){
+            music_audio.pause();
+            control_after.style.animationPlayState = "paused";
+        }else{
+            music_audio.play();
+            control_after.style.animationPlayState = "running";
+        }
+        isRunning = !isRunning;
+    });
+    </script>
+</body>
+</html>
